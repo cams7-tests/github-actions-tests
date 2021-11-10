@@ -18,6 +18,11 @@ jobs:
           name: output-log-file
           path: output.log
           
+      - name: List files in the repository
+        run: |
+          ls -hal ${{ github.workspace }}
+      - run: echo "This job's status is ${{ job.status }}."
+          
   download-output:
     name: Download output
     runs-on: ubuntu-latest
@@ -28,3 +33,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: output-log-file
+          
+      - name: List files in the repository
+        run: |
+          ls -hal ${{ github.workspace }}
+          
+      - run: echo "This job's status is ${{ job.status }}."
