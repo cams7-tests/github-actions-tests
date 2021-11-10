@@ -12,16 +12,20 @@ jobs:
       - shell: bash
         run: |
           expr 1 + 1 > output.log
+          
+      - name: List files in the repository
+        shell: bash
+        run: |
+          ls -hal ${{ github.workspace }}
+          
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
           name: output-log-file
-          path: output.log
-          
-      - name: List files in the repository
-        run: |
-          ls -hal ${{ github.workspace }}
-      - run: echo "This job's status is ${{ job.status }}."
+          path: output.log       
+
+      - shell: bash
+        run: echo "This job's status is ${{ job.status }}."
           
   download-output:
     name: Download output
@@ -29,13 +33,15 @@ jobs:
     needs: save-output
     
     steps:
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: output-log-file
-          
       - name: List files in the repository
+        shell: bash
         run: |
           ls -hal ${{ github.workspace }}
           
-      - run: echo "This job's status is ${{ job.status }}."
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file          
+
+      - shell: bash
+        run: echo "This job's status is ${{ job.status }}."
