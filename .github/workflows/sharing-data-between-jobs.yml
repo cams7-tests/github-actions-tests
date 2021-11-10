@@ -33,7 +33,7 @@ jobs:
     needs: save-output
     
     steps:
-      - name: List files in the repository
+      - name: List files in the repository before download
         shell: bash
         run: |
           ls -hal ${{ github.workspace }}
@@ -41,7 +41,12 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v2
         with:
-          name: output-log-file          
+          name: output-log-file
+          
+      - name: List files in the repository after download
+        shell: bash
+        run: |
+          ls -hal ${{ github.workspace }}
 
       - shell: bash
         run: echo "This job's status is ${{ job.status }}."
