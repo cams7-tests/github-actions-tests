@@ -1,4 +1,4 @@
-name: Sharing data between jobs
+name: 3. Essential features
 on:
   push:
     branches: [ main ]
