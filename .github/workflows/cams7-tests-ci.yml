@@ -1,4 +1,4 @@
-name: 'CAMs7 tests' CI
+name: My test
 
 on:
   push:
@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a one-line script
-        run: echo Hello from 'CAMs7 tests' Organization
+        run: echo Hello world
