@@ -1,6 +1,10 @@
 name: 7. Contexts
 
-on: push
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**-contexts.yml'
 
 jobs:
   one:
