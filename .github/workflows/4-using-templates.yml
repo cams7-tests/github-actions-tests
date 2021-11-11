@@ -3,8 +3,8 @@ name: 4. Using templates
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+      - '**-using-templates.yml'
 
 jobs:
   build:
