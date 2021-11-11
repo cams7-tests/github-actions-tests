@@ -41,3 +41,16 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+        
+      - id: create-output-file
+        name: Create output file
+        shell: bash
+        run: |
+          expr 1 + 1 > output.log
+          
+      - if: ${{ steps['create-output-file'].conclusion == 'success'}}
+        id: show-files
+        name: Show files
+        shell: bash
+        run: |
+          ls -hal ls -hal ${{ github.workspace }}
