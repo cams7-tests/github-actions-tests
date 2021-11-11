@@ -1,4 +1,4 @@
-name: My test
+name: 4. Using templates
 
 on:
   push:
@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a one-line script
-        run: echo Hello world
+        run: echo Hello CAMs7
