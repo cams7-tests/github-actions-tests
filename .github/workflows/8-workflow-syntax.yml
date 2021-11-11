@@ -34,5 +34,5 @@ jobs:
           MIDDLE_NAME: A.
           LAST_NAME: Magalhães
         run: |
-          echo format('Hi there! My name is {0} {1} {2}.', $FIRST_NAME, $MIDDLE_NAME, $LAST_NAME)
+          echo ${{ format('Hi there! My name is {0} {1} {2}.', $FIRST_NAME, $MIDDLE_NAME, $LAST_NAME) }}
 
