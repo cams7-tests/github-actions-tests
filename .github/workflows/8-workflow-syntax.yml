@@ -5,7 +5,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - '**-workflow-syntax.yml'
+      - '**[0-9]+-workflow-syntax.yml'
 jobs:
   job1:
     runs-on: ubuntu-latest
