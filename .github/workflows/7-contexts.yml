@@ -53,5 +53,5 @@ jobs:
         if: ${{ steps['create-output-file'].conclusion == 'success'}}
         shell: bash
         run: |
-          echo Conclusion of step before is ${{ steps['create-output-file'].conclusion}}
+          echo Conclusion of 'Create output file' step is ${{ steps['create-output-file'].conclusion}}
           ls -hal ${{ github.workspace }}
