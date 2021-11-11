@@ -1,5 +1,11 @@
 name: 2. Understanding GitHub Actions
-on: [push]
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**-understanding-github-actions.yml'
+
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
