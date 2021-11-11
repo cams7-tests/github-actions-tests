@@ -3,6 +3,8 @@ name: 5. Reusing workflows
 on:
   push:
     branches: [ main ]
+    paths:
+      - '**-reusing-workflows.yml'
 
 jobs:
   call-workflow:
