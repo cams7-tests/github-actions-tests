@@ -1,4 +1,4 @@
-name: 6. Events that trigger workflows
+name: 06. Events that trigger workflows
 on:
   workflow_dispatch:
     inputs:
