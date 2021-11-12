@@ -1,10 +1,10 @@
-name: 1. Quickstart
+name: 01. Quickstart
 
 on:
   push:
     branches: [ main ]
     paths:
-      - '**-quickstart.yml'
+      - '**/[0-9]+-quickstart.yml'
 
 jobs:
   Explore-GitHub-Actions:
