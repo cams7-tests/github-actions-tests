@@ -1,10 +1,10 @@
-name: 2. Understanding GitHub Actions
+name: 02. Understanding GitHub Actions
 
 on:
   push:
     branches: [ main ]
     paths:
-      - '**-understanding-github-actions.yml'
+      - '**/[0-9]+-understanding-github-actions.yml'
 
 jobs:
   check-bats-version:
