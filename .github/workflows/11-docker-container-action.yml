@@ -1,4 +1,4 @@
--name: 11. Docker container action
+name: 11. Docker container action
 
 on:
   push:
