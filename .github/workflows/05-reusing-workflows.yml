@@ -5,10 +5,11 @@ on:
     branches: [ main ]
     paths:
       - '**/[0-9]+-reusing-workflows.yml'
+      - '**/[0-9]+-reusable-workflow.yml'
 
 jobs:
   call-workflow:
-    uses: cams7-tests/github-actions-tests/.github/workflows/05-reusable-workflow.yml@793211b92b8ddd7ec113529cce3e28f88d1e6ca7
+    uses: cams7-tests/github-actions-tests/.github/workflows/05-reusable-workflow.yml@af2ee2650bbdfebb7d6a3ab9584a2dea23dd33e4
     with:
       username: cams7
     secrets:
