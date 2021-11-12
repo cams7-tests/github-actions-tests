@@ -1,10 +1,10 @@
-name: 3. Essential features
+name: 03. Essential features
 
 on:
   push:
     branches: [ main ]
     paths:
-      - '**-essential-features.yml'
+      - '**/[0-9]+-essential-features.yml'
 
 jobs:
   save-output:
