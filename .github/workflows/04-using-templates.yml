@@ -1,10 +1,10 @@
-name: 4. Using templates
+name: 04. Using templates
 
 on:
   push:
     branches: [ main ]
     paths:
-      - '**-using-templates.yml'
+      - '**/[0-9]+-using-templates.yml'
 
 jobs:
   build:
