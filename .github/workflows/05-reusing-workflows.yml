@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: cams7-tests/github-actions-tests/.github/workflows/05-reusable-workflow.yml@6b333942af5776e31476070768d90a5d9baa07ca
+    uses: cams7-tests/github-actions-tests/.github/workflows/05-reusable-workflow.yml@793211b92b8ddd7ec113529cce3e28f88d1e6ca7
     with:
       username: cams7
     secrets:
