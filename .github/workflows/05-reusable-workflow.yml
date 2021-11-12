@@ -13,7 +13,8 @@ on:
 jobs:
   show_hello:
     name: Pass input and secrets to my-action
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Run a one-line script
         run: echo Hello ${{ inputs.username }}, your token is ${{ secrets.token }}
