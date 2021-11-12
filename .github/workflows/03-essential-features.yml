@@ -33,7 +33,8 @@ jobs:
           
   download-output:
     name: Download output
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: save-output
     
     steps:
