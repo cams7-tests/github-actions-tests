@@ -9,7 +9,8 @@ on:
 jobs:
   save-output:
     name: Save output
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - shell: bash
