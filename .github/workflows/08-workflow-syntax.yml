@@ -8,7 +8,8 @@ on:
       - '**[0-9]+-workflow-syntax.yml'
 jobs:
   job1:
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
     # Map a step output to a job output
     outputs:
       output1: ${{ steps.step1.outputs.test }}
@@ -19,14 +20,16 @@ jobs:
       - id: step2
         run: echo "::set-output name=test::world"
   job2:
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: job1
     steps:
       - run: echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
       
   my-job:
     name: My Job
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Print a greeting
         env:
@@ -36,7 +39,8 @@ jobs:
         run: echo Hi there! My name is $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
         
   build:
-    runs-on: ubuntu-latest
+#    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
        include:
