@@ -1,0 +1,21 @@
+name: 12. JavaScript action
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/[0-9]+-creating-a-javascript-action.yml'
+      
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        uses: cams7-tests/hello-world-javascript-action@v1.2
+        id: hello
+        with:
+          who-to-greet: 'César A Magalhães'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
