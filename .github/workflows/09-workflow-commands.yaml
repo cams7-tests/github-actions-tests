@@ -1,5 +1,5 @@
 
-name: 9. Workflow commands
+name: 09. Workflow commands
 
 on:
   push:
